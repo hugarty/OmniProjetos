@@ -1,2 +1,3 @@
-# OmniProjetos
-Coloco projetos que desenvolvi em conjunto com OmniStack
+# Projeto Aircnc
+
+Projeto que utiliza React, React-native e Node.js para criar um "clone" do Airbnb.
