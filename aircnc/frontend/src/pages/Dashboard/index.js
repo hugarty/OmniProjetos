@@ -4,19 +4,17 @@ import api from '../../services/api';
 import './styles.css'
 
 export default function Dashboard() {
-    const [spots, setSpots] = useState([])
+    const [spots, setSpots] = useState([]);
 
-    //Executa apenas uma vez quando o segundo argumento está vazio
+    //Executa apenas uma vez quando o segundo argumento tem length 0
     useEffect(() => {
         async function loadSpots() {
             const user_id = localStorage.getItem('user');
             const response = await api.get('/dashboard', {
                 headers: { user_id }
             });
-
             setSpots(response.data);
         }
-
         loadSpots();
     }, [])
     return (
