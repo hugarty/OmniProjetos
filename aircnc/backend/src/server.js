@@ -10,6 +10,8 @@ const app = express();
 const server = http.Server(app);
 const io  = socketio(server);
 
+const serverIP = require('./utils/serverIP')
+
 mongoose.connect("mongodb+srv://senha123:senha123@omniaircnc-mi5cc.mongodb.net/test?retryWrites=true&w=majority",{
     useNewUrlParser: true,
     useUnifiedTopology: true
